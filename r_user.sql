@@ -49,9 +49,14 @@ INSERT INTO `permisos` (`id`, `rol`) VALUES
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
+  `proyecto` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `genero` varchar(50) NOT NULL,
+  `cedula` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `telefono` varchar(50) NOT NULL,
+  `ubicacion` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `rol` int(11) NOT NULL
@@ -61,12 +66,12 @@ CREATE TABLE `user` (
 -- Volcado de datos para la tabla `user`
 --
 
-INSERT INTO `user` (`id`, `nombre`, `correo`, `telefono`, `password`, `fecha`, `rol`) VALUES
-(3, 'Maria', 'user@gmail.com', '9900258789', '12345', '2022-06-11 18:30:47', 2),
-(4, 'Emanuel', 'usuario@gmail.com.mx', '9911165670', '12345', '2022-06-13 19:10:54', 1),
-(7, 'Jose', 'jt615257@gmail.com', '9981298737', '12345', '2022-06-11 18:31:03', 2),
-(10, 'Shaggy', 'Shaggy@Buu.net', '54948151', '12345', '2022-06-13 19:09:56', 1),
-(11, 'Scrapy', 'sam@gmail.com', '9975201478', '12345', '2022-06-13 18:31:27', 2);
+INSERT INTO `user` (`id`, `proyecto`,`nombre`, `apellido` , `genero`, `cedula`, `correo`, `telefono`, `ubicacion`, `password`, `fecha`, `rol`) VALUES
+(3, 'ACF', 'Maria', 'Valladares' , 'Femenino' , '1718541079', 'user@gmail.com', '9900258789', 'QUITO', '12345', '2022-06-11 18:30:47', 2),
+(4, 'ACF', 'Emanuel', 'Sandoval', 'Masculino','1718568948','usuario@gmail.com.mx', '9911165670', 'QUITO','12345', '2022-06-13 19:10:54', 1),
+(7, 'ACF', 'Jose', 'Torres', 'Masculino','1718569847','jt615257@gmail.com', '9981298737', 'QUITO', '12345', '2022-06-11 18:31:03', 2),
+(10, 'ACF','Shaggy', 'Santillan', 'Masculino', '1718549856','Shaggy@Buu.net', '54948151', 'QUITO', '12345', '2022-06-13 19:09:56', 1),
+(11, 'ACF', 'Scrapy', 'Quemag', 'Masculino', '1745867894','sam@gmail.com', '9975201478', 'QUITO','12345', '2022-06-13 18:31:27', 2);
 
 --
 -- Índices para tablas volcadas

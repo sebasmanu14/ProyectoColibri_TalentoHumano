@@ -44,8 +44,24 @@ if( $validar == null || $validar = ''){
 <form  action="../includes/validar.php" method="POST">
 
                             <div class="form-group">
+                            <label for="proyecto" class="form-label">Proyecto</label>
+                            <input type="text"  id="proyecto" name="proyecto" class="form-control" required>
+                            </div>
+                            <div class="form-group">
                             <label for="nombre" class="form-label">Nombre *</label>
                             <input type="text"  id="nombre" name="nombre" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="apellido" class="form-label">Apellido *</label>
+                            <input type="text"  id="apellido" name="apellido" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="genero" class="form-label">Género</label>
+                            <input type="text"  id="genero" name="genero" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="cedula" class="form-label">Cédula</label>
+                            <input type="text"  id="cedula" name="cedula" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="username">Correo:</label><br>
@@ -59,6 +75,10 @@ if( $validar == null || $validar = ''){
                             <div class="form-group">
                                 <label for="password">Contraseña:</label><br>
                                 <input type="password" name="password" id="password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <label for="ubicacion" class="form-label">Ubicación</label>
+                            <input type="text"  id="ubicacion" name="ubicacion" class="form-control" required>
                             </div>
                             
                             <div class="form-group">

@@ -54,6 +54,12 @@ $usuario = mysqli_fetch_assoc($resultado);
                             <br>
                             <h3 class="text-center">Editar usuario</h3>
                             <div class="form-group">
+                            <label for="proyecto" class="form-label">Proyecto</label>
+                            <input type="text"  id="proyecto" name="proyecto" class="form-control" value="<?php echo $usuario['proyecto'];?>"required>
+                            </div>
+
+
+                            <div class="form-group">
                             <label for="nombre" class="form-label">Nombre *</label>
                             <input type="text"  id="nombre" name="nombre" class="form-control" value="<?php echo $usuario['nombre'];?>"required>
                             </div>
@@ -63,6 +69,17 @@ $usuario = mysqli_fetch_assoc($resultado);
                             <div class="form-group">
                             <label for="apellido" class="form-label">Apellido *</label>
                             <input type="text"  id="apellido" name="apellido" class="form-control" value="<?php echo $usuario['apellido'];?>"required>
+                            </div>
+
+
+                            <div class="form-group">
+                            <label for="genero" class="form-label">Genero</label>
+                            <input type="text"  id="genero" name="genero" class="form-control" value="<?php echo $usuario['genero'];?>"required>
+                            </div>
+
+                            <div class="form-group">
+                            <label for="cedula" class="form-label">cedula</label>
+                            <input type="text"  id="cedula" name="cedula" class="form-control" value="<?php echo $usuario['cedula'];?>"required>
                             </div>
 
 
@@ -77,6 +94,14 @@ $usuario = mysqli_fetch_assoc($resultado);
                                 <input type="tel"  id="telefono" name="telefono" class="form-control" value="<?php echo $usuario['telefono'];?>" required>
                                 
                             </div>
+
+                            <div class="form-group">
+                                  <label for="ubicacion" class="form-label">Ubicacion</label>
+                                <input type="tel"  id="ubicacion" name="ubicacion" class="form-control" value="<?php echo $usuario['ubicacion'];?>" required>
+                                
+                            </div>
+
+
                             <div class="form-group">
                                 <label for="password">Contraseña:</label><br>
                                 <input type="password" name="password" id="password" class="form-control" value="<?php echo $usuario['password'];?>" required>
