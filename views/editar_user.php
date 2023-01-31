@@ -56,7 +56,7 @@ $usuario = mysqli_fetch_assoc($resultado);
                             <br>
                             <h3 class="text-center">Editar usuario</h3>
                             <div class="form-group">
-                            <label for="proyecto" class="form-label">Proyesadsadsdcto</label>
+                            <label for="proyecto" class="form-label">Proyecto</label>
                             <input type="text"  id="proyecto" name="proyecto" class="form-control" value="<?php echo $usuario['proyecto'];?>"required>
                             </div>
 
@@ -80,7 +80,7 @@ $usuario = mysqli_fetch_assoc($resultado);
                             </div>
 
                             <div class="form-group">
-                            <label for="cedula" class="form-label">cedula</label>
+                            <label for="cedula" class="form-label">Cédula</label>
                             <input type="text"  id="cedula" name="cedula" class="form-control" value="<?php echo $usuario['cedula'];?>"required>
                             </div>
 
@@ -92,13 +92,13 @@ $usuario = mysqli_fetch_assoc($resultado);
                                 <input type="email" name="correo" id="correo" class="form-control" placeholder="" value="<?php echo $usuario['correo'];?>">
                             </div>
                             <div class="form-group">
-                                  <label for="telefono" class="form-label">Telefono *</label>
+                                  <label for="telefono" class="form-label">Teléfono *</label>
                                 <input type="tel"  id="telefono" name="telefono" class="form-control" value="<?php echo $usuario['telefono'];?>" required>
                                 
                             </div>
 
                             <div class="form-group">
-                                  <label for="ubicacion" class="form-label">Ubicacion</label>
+                                  <label for="ubicacion" class="form-label">Ubicación</label>
                                 <input type="tel"  id="ubicacion" name="ubicacion" class="form-control" value="<?php echo $usuario['ubicacion'];?>" required>
                                 
                             </div>
@@ -121,7 +121,7 @@ $usuario = mysqli_fetch_assoc($resultado);
 
                                 <div class="mb-3">
                                     
-                                <button type="submit" class="btn btn-success" >Editar</button>
+                                <button type="submit" class="btn btn-success" >Guardar</button>
                                <a href="user.php" class="btn btn-danger">Cancelar</a>
                                
                             </div>
