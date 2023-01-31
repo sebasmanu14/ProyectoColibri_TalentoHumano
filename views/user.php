@@ -110,7 +110,7 @@ if(isset($_GET['enviar'])){
                         <th>Telefono</th>
                         <th>Ubicación</th>
 
-                        <th>Servicio</th>
+                        <!-- <th>Servicio</th>
                         <th>Cargo</th>
                         <th>Fecha ingreso</th>
                         <th>Fecha ingreso proyecto</th>
@@ -130,7 +130,7 @@ if(isset($_GET['enviar'])){
                         <th>Correo personal</th>
                         <th>Contacto de emergencia</th>
                         <th>Parentesco</th>
-                        <th>Numero</th>
+                        <th>Numero</th> -->
 
                         <th>Fecha</th>
                         <th>Rol</th>
@@ -161,7 +161,7 @@ if($dato -> num_rows >0){
 <td><?php echo $fila['telefono']; ?></td>
 <td><?php echo $fila['ubicacion']; ?></td>
 
-<td><?php echo $fila['profesionales/Contrato']; ?></td>
+<!-- <td><?php echo $fila['profesionales/Contrato']; ?></td>
 <td><?php echo $fila['cargo']; ?></td>
 <td><?php echo $fila['fechaingreso']; ?></td>
 <td><?php echo $fila['fechaingproyecto']; ?></td>
@@ -181,7 +181,7 @@ if($dato -> num_rows >0){
 <td><?php echo $fila['correopers']; ?></td>
 <td><?php echo $fila['contemerg']; ?></td>
 <td><?php echo $fila['parentesco']; ?></td>
-<td><?php echo $fila['numero']; ?></td>
+<td><?php echo $fila['numero']; ?></td> -->
 
 
 <td><?php echo $fila['fecha']; ?></td>
