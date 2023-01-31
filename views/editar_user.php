@@ -20,6 +20,8 @@ if( $validar == null || $validar = ''){
 $id= $_GET['id'];
 $conexion= mysqli_connect("localhost", "root", "", "r_user");
 $consulta= "SELECT * FROM user WHERE id = $id";
+
+echo $id;
 $resultado = mysqli_query($conexion, $consulta);
 $usuario = mysqli_fetch_assoc($resultado);
 
@@ -54,7 +56,7 @@ $usuario = mysqli_fetch_assoc($resultado);
                             <br>
                             <h3 class="text-center">Editar usuario</h3>
                             <div class="form-group">
-                            <label for="proyecto" class="form-label">Proyecto</label>
+                            <label for="proyecto" class="form-label">Proyesadsadsdcto</label>
                             <input type="text"  id="proyecto" name="proyecto" class="form-control" value="<?php echo $usuario['proyecto'];?>"required>
                             </div>
 
