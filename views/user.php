@@ -134,6 +134,29 @@ if(isset($_GET['enviar'])){
                         <th>Correo</th>
                         <th>Telefono</th>
                         <th>Ubicación</th>
+
+                        <th>Servicio</th>
+                        <th>Cargo</th>
+                        <th>Fecha ingreso</th>
+                        <th>Fecha ingreso proyecto</th>
+                        <th>Fecha salida</th>
+                        <th>Titulo tercer nivel</th>
+                        <th>Titulo cuarto nivel</th>
+                        <th>Fecha nacimiento</th>
+                        <th>Edad</th>
+                        <th>Lugar nacimiento</th>
+                        <th>Estado civil</th>
+                        <th>Discapacidad</th>
+                        <th>Banco</th>
+                        <th>Cuenta</th>
+                        <th>Operadora</th>
+                        <th>Tipo de sangre</th>
+                        <th>Correo institucional</th>
+                        <th>Correo personal</th>
+                        <th>Contacto de emergencia</th>
+                        <th>Parentesco</th>
+                        <th>Numero</th>
+
                         <th>Fecha</th>
                         <th>Rol</th>
                         <th>Acciones</th>
@@ -145,8 +168,7 @@ if(isset($_GET['enviar'])){
 				<?php
 
 $conexion=mysqli_connect("localhost","root","","r_user");               
-$SQL="SELECT user.id, user.proyecto, user.nombre, user.apellido, user.genero, user.cedula, user.correo, user.telefono,
-user.ubicacion, user.fecha, permisos.rol FROM user
+$SQL= "SELECT * FROM user
 LEFT JOIN permisos ON user.rol = permisos.id $where";
 $dato = mysqli_query($conexion, $SQL);
 
@@ -163,6 +185,30 @@ if($dato -> num_rows >0){
 <td><?php echo $fila['correo']; ?></td>
 <td><?php echo $fila['telefono']; ?></td>
 <td><?php echo $fila['ubicacion']; ?></td>
+
+<td><?php echo $fila['profesionales/Contrato']; ?></td>
+<td><?php echo $fila['cargo']; ?></td>
+<td><?php echo $fila['fechaingreso']; ?></td>
+<td><?php echo $fila['fechaingproyecto']; ?></td>
+<td><?php echo $fila['fechasalida']; ?></td>
+<td><?php echo $fila['tit3nivel']; ?></td>
+<td><?php echo $fila['tit4nivel']; ?></td>
+<td><?php echo $fila['fechanac']; ?></td>
+<td><?php echo $fila['edad']; ?></td>
+<td><?php echo $fila['lugnaci']; ?></td>
+<td><?php echo $fila['estadcivil']; ?></td>
+<td><?php echo $fila['discapacidad']; ?></td>
+<td><?php echo $fila['banco']; ?></td>
+<td><?php echo $fila['cuenta']; ?></td>
+<td><?php echo $fila['operadora']; ?></td>
+<td><?php echo $fila['tiposangre']; ?></td>
+<td><?php echo $fila['correoinst']; ?></td>
+<td><?php echo $fila['correopers']; ?></td>
+<td><?php echo $fila['contemerg']; ?></td>
+<td><?php echo $fila['parentesco']; ?></td>
+<td><?php echo $fila['numero']; ?></td>
+
+
 <td><?php echo $fila['fecha']; ?></td>
 <td><?php echo $fila['rol']; ?></td>
 
