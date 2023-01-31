@@ -32,7 +32,7 @@ function editar_registro()
   $consulta = "UPDATE user SET proyecto = '$proyecto', cedula = '$cedula',nombre = '$nombre',apellido = '$apellido',genero = '$genero',correo = '$correo',
     telefono = '$telefono', fechanac = '$fechanac', edad = '$edad', lugnaci = '$lugnaci', estadcivil = '$estadcivil', discapacidad = '$discapacidad', tiposangre = '$tiposangre',
     fechaingreso ='$fechaingreso', cargo ='$cargo', fechaingproyecto ='$fechaingproyecto', fechasalida ='$fechasalida', tit3nivel ='$tit3nivel', tit4nivel ='$tit4nivel', banco ='$banco', cuenta ='$cuenta',
-    ubicacion ='$ubicacion', password ='$password', rol = '$rol' WHERE nombre = '$nombre'";
+    ubicacion ='$ubicacion', password ='$password', rol = '$rol' WHERE id = '$id'";
 
   mysqli_query($conexion, $consulta);
   header('Location: ../views/user.php');
@@ -47,8 +47,7 @@ function editar_user()
   $consulta = "UPDATE user SET cedula = '$cedula',nombre = '$nombre',apellido = '$apellido',genero = '$genero',correo = '$correo',
     telefono = '$telefono', fechanac = '$fechanac', edad = '$edad', lugnaci = '$lugnaci', estadcivil = '$estadcivil', discapacidad = '$discapacidad', tiposangre = '$tiposangre',
     fechaingreso ='$fechaingreso', cargo ='$cargo', fechaingproyecto ='$fechaingproyecto', fechasalida ='$fechasalida', tit3nivel ='$tit3nivel', tit4nivel ='$tit4nivel', banco ='$banco', cuenta ='$cuenta',
-    ubicacion ='$ubicacion', password ='$password', WHERE id = '$id'";
-
+    ubicacion ='$ubicacion', rol = 2 WHERE id = '$id'";
   mysqli_query($conexion, $consulta);
   header('Location: ../views/lector.php');
 }

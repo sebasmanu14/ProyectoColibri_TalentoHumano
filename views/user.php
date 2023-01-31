@@ -25,11 +25,10 @@ include('../views/layout/navbar.php');
     <div>
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#create">
         <span class="glyphicon glyphicon-plus"></span> Nuevo usuario <i class="fa fa-plus"></i> </a></button>
-
       <a class="btn btn-primary" href="../includes/excel.php">Excel
         <i class="fa fa-table" aria-hidden="true"></i>
       </a>
-      <a href="../includes/reporte.php" class="btn btn-primary"><b>PDF</b> </a>
+      <a href="../includes/reporte.php" class="btn btn-primary" target=”_blank”><b>PDF</b> </a>
     </div>
     <br>
     <div class="container-fluid">

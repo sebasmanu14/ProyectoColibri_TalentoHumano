@@ -12,10 +12,9 @@ if( $validar == null || $validar = ''){
 }
 
 include('../views/layout/navbar.php');
-$nombre= $_GET['nombre'];
+$id= $_GET['id'];
 $conexion= mysqli_connect("localhost", "root", "", "r_user");
-$consulta= "SELECT * FROM user WHERE nombre = $nombre";
-
+$consulta= "SELECT * FROM user WHERE id = '$id'";
 $resultado = mysqli_query($conexion, $consulta);
 $usuario = mysqli_fetch_assoc($resultado);
 
@@ -156,10 +155,7 @@ $usuario = mysqli_fetch_assoc($resultado);
           <label for="ubicacion" class="form-label">Ubicacion</label>
           <input id="ubicacion" name="ubicacion" class="form-control" value="<?php echo $usuario['ubicacion']; ?>" required>
         </div>
-        <div class="form-group col-4">
-          <label for="password">Contraseña:</label><br>
-          <input type="password" name="password" id="password" class="form-control" value="<?php echo $usuario['password']; ?>" required>
-        </div>
+          
         <div class="form-group col-4">
           <label for="rol" class="form-label">Rol de usuario *</label>
           <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol, 1 admin, 2 lector.." value="<?php echo $usuario['rol']; ?>" disabled required>
