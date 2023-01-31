@@ -12,6 +12,10 @@ if (isset($_POST['accion'])){
             editar_registro();
             break; 
 
+            case 'editar_user':
+                editar_user();
+                break; 
+
             case 'eliminar_registro';
             eliminar_registro();
     
@@ -36,6 +40,19 @@ if (isset($_POST['accion'])){
 
 
 		header('Location: ../views/user.php');
+
+}
+
+function editar_user() {
+    $conexion=mysqli_connect("localhost","root","","r_user");
+    extract($_POST);
+    $consulta="UPDATE user SET proyecto = '$proyecto' , nombre = '$nombre', apellido = '$apellido', genero = '$genero', cedula = '$cedula', correo = '$correo', telefono = '$telefono', ubicacion = '$ubicacion',
+    password ='$password', rol = '$rol' WHERE id = '$id' ";
+
+    mysqli_query($conexion, $consulta);
+
+
+    header('Location: ../views/lector.php');
 
 }
 
