@@ -10,8 +10,7 @@ if ($validar == null || $validar = '') {
   header("Location: ../includes/login.php");
   die();
 }
-
-print_r($_SESSION['nombre'])
+include('../views/layout/navbar.php')
 
 ?>
 <!DOCTYPE html>
@@ -29,33 +28,17 @@ print_r($_SESSION['nombre'])
 </head>
 <br>
 <div class="container is-fluid">
-
-
-
-
   <div class="col-xs-12">
-    <h1>Bienvenido User <?php echo $_SESSION['nombre'] ?></h1>
+    <h1>Bienvenido Usuario <?php echo $_SESSION['nombre'] ?></h1>
     <br>
-    <h1>Lista de usuarios</h1>
     <br>
-    <div>
-      <a class="btn btn-warning" href="../includes/_sesion/cerrarSesion.php">Log Out
-      </a>
+    <div class="alert alert-primary" role="alert">
+      Llenar el siguiente formulario para completar de cargar su información <a href="registro_user.php?nombre=<?php echo $_SESSION['nombre'];?>"  class="alert-link">Formulario</a>
     </div>
-    <br>
-
-
-
     <div class="container-fluid">
     </div>
-
-
     <br>
-
-
     <table class="table table-striped table-dark table_id ">
-
-
       <thead>
         <tr>
           <th>Proyecto</th>
@@ -67,27 +50,18 @@ print_r($_SESSION['nombre'])
           <th>Telefono</th>
           <th>Ubicación</th>
           <th>Fecha</th>
-          <th>Rol</th>
-          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-
         <?php
-
-
-
         $conexion = mysqli_connect("localhost", "root", "", "r_user");
-        $SQL = "SELECT* FROM user";
+        $SQL = "SELECT * FROM user WHERE nombre = $_SESSION[nombre]";
         $dato = mysqli_query($conexion, $SQL);
-
         if ($dato->num_rows > 0) {
           while ($fila = mysqli_fetch_array($dato)) {
-
         ?>
-
             <tr>
-              <td><?php echo $fila['id']; ?></td>
+              <td><?php echo $fila['proyecto']; ?></td>
               <td><?php echo $fila['nombre']; ?></td>
               <td><?php echo $fila['apellido']; ?></td>
               <td><?php echo $fila['genero']; ?></td>
@@ -96,21 +70,7 @@ print_r($_SESSION['nombre'])
               <td><?php echo $fila['telefono']; ?></td>
               <td><?php echo $fila['ubicacion']; ?></td>
               <td><?php echo $fila['fecha']; ?></td>
-              <td><?php echo $fila['rol']; ?></td>
-
-
-
-              <td>
-
-
-                <a class="btn btn-warning" href="registro_user.php?id=<?php echo $fila['id'] ?> ">
-                  <i class="fa fa-edit"></i> Llenar F </a>
-
-
-              </td>
             </tr>
-
-
           <?php
           }
         } else {
@@ -131,7 +91,8 @@ print_r($_SESSION['nombre'])
         </body>
     </table>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js">
+    </script>
     <script src="../js/user.js"></script>
     <script src="../js/acciones.js"></script>
     <script src="../js/buscador.js"></script>

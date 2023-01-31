@@ -2,10 +2,8 @@
 $conexion= mysqli_connect("localhost", "root", "", "r_user");
 
 if(isset($_POST['registrar'])){
-
     if(strlen($_POST['proyecto']) >=1 && strlen($_POST['nombre']) >=1 && strlen($_POST['apellido']) >=1 && strlen($_POST['genero']) >=1 && strlen($_POST['cedula']) >=1 && strlen($_POST['correo']) >=1 && strlen($_POST['telefono'])  >=1 
     && strlen($_POST['ubicacion']) >=1 && strlen($_POST['password'])  >=1 
-
     && strlen($_POST['profesionales/Contrato']) >= 1 
     && strlen($_POST['cargo']) >= 1
     && strlen($_POST['fechaingreso']) >= 1
