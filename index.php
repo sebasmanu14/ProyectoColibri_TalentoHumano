@@ -39,7 +39,13 @@ if ($validar == null || $validar = '') {
           <form action="../includes/nuevo_usuario.php" method="POST">
             <div class="form-group">
               <label for="proyecto" class="form-label">Proyecto</label>
-              <input type="text" id="proyecto" name="proyecto" class="form-control" value="<?php echo $usuario['proyecto']; ?>" required>
+              <select class="form-select" name="proyecto" aria-label="Default select example" required>
+                <option value="KCP">KCP</option>
+                <option value="ACF">ACF</option>
+                <option value="IRC">IRC</option>
+                <option value="IRC-INF">IRC-INF</option>
+                <option value="MOFA">MOFA</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="usuario">Usuario:</label><br>
@@ -55,7 +61,12 @@ if ($validar == null || $validar = '') {
             </div>
             <div class="form-group">
               <label for="rol" class="form-label">Rol de usuario *</label>
-              <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol, 1 admin, 2 user" value="<?php echo $usuario['rol']; ?>" required>
+              <!-- <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol, 1 admin, 2 user" value="<?php echo $usuario['rol']; ?>" required> -->
+              <select class="form-select" name="rol" aria-label="Default select example" required>
+                <option value="2">Usuario</option>
+                <option value="1">Administrador</option>
+              </select>
+
               <input type="hidden" name="accion" value="editar_registro">
               <input type="hidden" name="id" value="<?php echo $id; ?>">
             </div>
@@ -71,4 +82,5 @@ if ($validar == null || $validar = '') {
     </div>
   </div>
 </body>
+
 </html>

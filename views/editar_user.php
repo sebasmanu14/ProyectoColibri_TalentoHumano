@@ -41,7 +41,13 @@ $usuario = mysqli_fetch_assoc($resultado);
         <h4 class="text-start">Datos Personales</h4>
         <div class="form-group col-4">
           <label for="proyecto" class="form-label">Proyecto</label>
-          <input type="text" id="proyecto" name="proyecto" class="form-control" value="<?php echo $usuario['proyecto']; ?>" required>
+          <select class="form-select" name="proyecto" aria-label="Default select example" required>
+            <option value="KCP">KCP</option>
+            <option value="ACF">ACF</option>
+            <option value="IRC">IRC</option>
+            <option value="IRC-INF">IRC-INF</option>
+            <option value="MOFA">MOFA</option>
+          </select>
         </div>
         <div class="form-group  col-4">
           <label for="cedula" class="form-label">Cédula</label>
