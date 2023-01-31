@@ -12,7 +12,6 @@ if( $validar == null || $validar = ''){
   
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,29 +21,56 @@ if( $validar == null || $validar = ''){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <title>Usuarios</title>
 </head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand" href="#">Talento Humano</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="contenido"> 
+      <a class="btn btn-danger" href="../includes/_sesion/cerrarSesion.php">Cerrar Sesion
+      <i class="fa-solid fa-right-from-bracket"></i>
+       </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <br>
 <div class="container is-fluid">
-
-
-
 
 <div class="col-xs-12">
   		<h1>Bienvenido Administrador <?php echo $_SESSION['nombre']; ?></h1>
       <br>
-		<h1>Lista de usuarios</h1>
+		<h1 class="text-center">Lista de usuarios</h1>
     <br>
 		<div>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#create">
 				<span class="glyphicon glyphicon-plus"></span> Nuevo usuario   <i class="fa fa-plus"></i> </a></button>
-
-      <a class="btn btn-warning" href="../includes/_sesion/cerrarSesion.php">Log Out
-      <i class="fa fa-power-off" aria-hidden="true"></i>
-       </a>
 
        <a class="btn btn-primary" href="../includes/excel.php">Excel
        <i class="fa fa-table" aria-hidden="true"></i>
@@ -52,7 +78,6 @@ if( $validar == null || $validar = ''){
        <a href="../includes/reporte.php" class="btn btn-primary"><b>PDF</b> </a>
 		</div>
 		<br>
-
 
 
     <div class="container-fluid">
@@ -175,11 +200,12 @@ if($dato -> num_rows >0){
 
 	</body>
   </table>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 <script src="../js/user.js"></script>
 <script src="../js/acciones.js"></script>
 <script src="../js/buscador.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.js" integrity="sha512-S1KaVll2UTj29SOXML7O4LxU7zEoQhJgnondHE/ZvNrk7H4Rc9TLFKDaWuEzsHmAEkJnWFedc0hcVrpvFTOlwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 
