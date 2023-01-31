@@ -168,7 +168,8 @@ if(isset($_GET['enviar'])){
 				<?php
 
 $conexion=mysqli_connect("localhost","root","","r_user");               
-$SQL= "SELECT * FROM user
+$SQL="SELECT user.id, user.proyecto, user.nombre, user.apellido, user.genero, user.cedula, user.correo, user.telefono,
+user.ubicacion, user.fecha, permisos.rol FROM user
 LEFT JOIN permisos ON user.rol = permisos.id $where";
 $dato = mysqli_query($conexion, $SQL);
 
