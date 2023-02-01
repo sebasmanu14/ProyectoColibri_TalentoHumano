@@ -37,11 +37,11 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';            
     $mail->SMTPAuth   = true;                                   
-    $mail->Username   = 'juanmanobanda60@gmail.com';                     
-    $mail->Password   = 'vwwmigigsstzquxk';                               
+    // $mail->Username   = 'INGRESAR CORREO ';                     
+    // $mail->Password   = 'CONTRASEÑA';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
     $mail->Port       = 587;                        
-    $mail->setFrom('juanmanobanda60@gmail.com', 'FUNDACIÓN COLIBRI');
+    // $mail->setFrom('INGRESAR CORREO ', 'FUNDACIÓN COLIBRI');
     $mail->addAddress($correo, $nombre);     
 
     $mail->isHTML(true);
