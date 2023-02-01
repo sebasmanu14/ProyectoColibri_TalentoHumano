@@ -11,7 +11,6 @@ if(isset($_POST['registrar'])){
     $proyecto = trim($_POST['proyecto']);
     $nombre = trim($_POST['nombre']);
     $password = trim($_POST['password']);
-    header('Location: ../views/user.php');
     $rol = trim($_POST['rol']);
     $correo = trim($_POST['correo']);
 
@@ -19,7 +18,7 @@ if(isset($_POST['registrar'])){
     $result = mysqli_query($conexion, $query);
 
 if (mysqli_num_rows($result) > 0) {
-  echo "<script>alert('El valor ya existe en la base de datos'); history.back();</script>";
+  echo "<script>alert('El usuario ya existe'); history.back();</script>";
 } else {
     $consulta= "INSERT INTO user (proyecto, nombre, correo, password, rol)
     VALUES ('$proyecto', '$nombre','$correo','$password', '$rol' )";
@@ -38,11 +37,11 @@ try {
     $mail->isSMTP();
     $mail->Host       = 'smtp.gmail.com';            
     $mail->SMTPAuth   = true;                                   
-    $mail->Username   = '';                     
-    $mail->Password   = '';                               
+    $mail->Username   = 'juanmanobanda60@gmail.com';                     
+    $mail->Password   = 'vwwmigigsstzquxk';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            
     $mail->Port       = 587;                        
-    $mail->setFrom('', 'FUNDACIÓN COLIBRI');
+    $mail->setFrom('juanmanobanda60@gmail.com', 'FUNDACIÓN COLIBRI');
     $mail->addAddress($correo, $nombre);     
 
     $mail->isHTML(true);

@@ -31,13 +31,6 @@ include('../views/layout/navbar.php');
       <a href="../includes/reporte.php" class="btn btn-primary" target=”_blank”><b>PDF</b> </a>
     </div>
     <br>
-    <div class="container-fluid">
-      <form class="d-flex">
-        <form action="" method="GET">
-          <input class="form-control me-2" type="search" placeholder="Buscar con PHP" name="busqueda"> <br>
-          <button class="btn btn-outline-info" type="submit" name="enviar"> <b>Buscar </b> </button>
-        </form>
-    </div>
 
     <?php
     $conexion = mysqli_connect("localhost", "root", "", "r_user");
@@ -61,7 +54,7 @@ include('../views/layout/navbar.php');
       </form>
     </div>
     <br>
-    <table class="table table-striped">
+    <table class="table table-striped table_id">
       <thead>
         <tr>
           <th>Proyecto</th>
@@ -93,8 +86,6 @@ include('../views/layout/navbar.php');
                         <th>Contacto de emergencia</th>
                         <th>Parentesco</th>
                         <th>Numero</th> -->
-
-          <th>Fecha</th>
           <th>Rol</th>
           <th>Acciones</th>
         </tr>
@@ -141,7 +132,6 @@ LEFT JOIN permisos ON user.rol = permisos.id $where";
 <td><?php echo $fila['contemerg']; ?></td>
 <td><?php echo $fila['parentesco']; ?></td>
 <td><?php echo $fila['numero']; ?></td> -->
-              <td><?php echo $fila['fecha']; ?></td>
               <td><?php echo $fila['rol']; ?></td>
               <td>
                 <a class="btn btn-warning" href="editar_user.php?id=<?php echo $fila['id'] ?> ">

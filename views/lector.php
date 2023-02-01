@@ -39,6 +39,7 @@ include('../views/layout/navbar.php')
     <div class="container-fluid">
     </div>
     <br>
+    <div class="table-responsive">
     <table class="table table-striped table-dark table_id ">
       <thead>
         <tr>
@@ -50,7 +51,6 @@ include('../views/layout/navbar.php')
           <th>Correo</th>
           <th>Telefono</th>
           <th>Ubicación</th>
-          <th>Fecha</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -75,7 +75,6 @@ $dato = mysqli_query($conexion, $SQL);
               <td><?php echo $fila['correo']; ?></td>
               <td><?php echo $fila['telefono']; ?></td>
               <td><?php echo $fila['ubicacion']; ?></td>
-              <td><?php echo $fila['fecha']; ?></td>
               <td>
                 <a class="btn btn-warning" href="registro_user.php?id=<?php echo $fila['id'] ?> ">
                   LLenar Formulario</a>
@@ -94,6 +93,7 @@ $dato = mysqli_query($conexion, $SQL);
         ?>
         </body>
     </table>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js">
     </script>

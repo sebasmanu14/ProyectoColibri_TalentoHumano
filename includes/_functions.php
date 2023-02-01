@@ -44,7 +44,7 @@ function editar_user()
   $_SESSION['id'] = $id;
   $conexion = mysqli_connect("localhost", "root", "", "r_user");
   extract($_POST);
-  $consulta = "UPDATE user SET cedula = '$cedula',nombre = '$nombre',apellido = '$apellido',genero = '$genero',correo = '$correo',
+  $consulta = "UPDATE user SET cedula = '$cedula',apellido = '$apellido',genero = '$genero',correo = '$correo',
     telefono = '$telefono', fechanac = '$fechanac', edad = '$edad', lugnaci = '$lugnaci', estadcivil = '$estadcivil', discapacidad = '$discapacidad', tiposangre = '$tiposangre',
     fechaingreso ='$fechaingreso', cargo ='$cargo', fechaingproyecto ='$fechaingproyecto', fechasalida ='$fechasalida', tit3nivel ='$tit3nivel', tit4nivel ='$tit4nivel', banco ='$banco', cuenta ='$cuenta',
     ubicacion ='$ubicacion', rol = 2 WHERE id = '$id'";

@@ -116,7 +116,9 @@ $usuario = mysqli_fetch_assoc($resultado);
           <label for="cargo" class="form-label">Cargo</label>
           <select class="form-select" name="cargo" aria-label="Default select example">
             <option value="Comunicador">Comunicador</option>
-            <option value="Promotor">Promotor</option>
+            <option value="Presidente">Presidente</option>
+            <option value="Vice Presidente">Vice Presidente</option>
+            <option value="Administrador">Administrador</option>
           </select>
         </div>
         <div class="form-group col-4">
@@ -134,15 +136,19 @@ $usuario = mysqli_fetch_assoc($resultado);
         <div class="form-group  col-4">
           <label for="tit3nivel" class="form-label">Titulo de Tercer Nivel</label>
           <select class="form-select" name="tit3nivel" aria-label="Default select example">
-            <option value="Comunicador">Comunicador</option>
-            <option value="Promotor">Promotor</option>
+            <option value="Comunicación Social">Comunicación Social</option>
+            <option value="Ecoturismo">Ecoturismo</option>
+            <option value="Psicologa Clínica">Psicologa Clínica</option>
+            <option value="Sociologa">Sociologa</option>
           </select>
         </div>
         <div class="form-group  col-4">
-          <label for="tit4nivel" class="form-label">Titulo de Tercer Nivel</label>
+          <label for="tit4nivel" class="form-label">Titulo de Cuarto Nivel</label>
           <select class="form-select" name="tit4nivel" aria-label="Default select example">
-            <option value="Comunicador">Comunicador</option>
-            <option value="Promotor">Promotor</option>
+            <option value="Especialista en Derechos Humanos">Especialista en Derechos Humanos</option>
+            <option value="Magister en Derecho">Magister en Derecho</option>
+            <option value="Magister en educación superior">Magister en educación superior</option>
+            <option value="Maestría en Ciencias Biológicas">Maestría en Ciencias Biológicas</option>
           </select>
         </div>
         <div class="form-group col-4">

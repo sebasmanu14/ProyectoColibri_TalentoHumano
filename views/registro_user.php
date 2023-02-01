@@ -5,16 +5,16 @@ error_reporting(0);
 
 $validar = $_SESSION['nombre'];
 
-if( $validar == null || $validar = ''){
+if ($validar == null || $validar = '') {
 
-    header("Location: ../includes/login.php");
-    die();
+  header("Location: ../includes/login.php");
+  die();
 }
 
 include('../views/layout/navbar.php');
-$id= $_GET['id'];
-$conexion= mysqli_connect("localhost", "root", "", "r_user");
-$consulta= "SELECT * FROM user WHERE id = '$id'";
+$id = $_GET['id'];
+$conexion = mysqli_connect("localhost", "root", "", "r_user");
+$consulta = "SELECT * FROM user WHERE id = '$id'";
 $resultado = mysqli_query($conexion, $consulta);
 $usuario = mysqli_fetch_assoc($resultado);
 
@@ -23,15 +23,17 @@ $usuario = mysqli_fetch_assoc($resultado);
 
 <!DOCTYPE html>
 <html lang="es-MX">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
+
 <body id="page-top">
-<form action="../includes/_functions.php" method="POST">
+  <form action="../includes/_functions.php" method="POST">
     <div class="container">
       <div class="row">
         <br>
@@ -48,7 +50,7 @@ $usuario = mysqli_fetch_assoc($resultado);
         </div>
         <div class="form-group col-4">
           <label for="nombre" class="form-label">Nombre *</label>
-          <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $usuario['nombre']; ?>" required>
+          <input type="text" id="nombre" name="nombre" class="form-control" value="<?php echo $usuario['nombre']; ?>" required disabled>
         </div>
         <div class="form-group col-4">
           <label for="apellido" class="form-label">Apellido *</label>
@@ -109,7 +111,9 @@ $usuario = mysqli_fetch_assoc($resultado);
           <label for="cargo" class="form-label">Cargo</label>
           <select class="form-select" name="cargo" aria-label="Default select example">
             <option value="Comunicador">Comunicador</option>
-            <option value="Promotor">Promotor</option>
+            <option value="Presidente">Presidente</option>
+            <option value="Vice Presidente">Vice Presidente</option>
+            <option value="Administrador">Administrador</option>
           </select>
         </div>
         <div class="form-group col-4">
@@ -127,15 +131,19 @@ $usuario = mysqli_fetch_assoc($resultado);
         <div class="form-group  col-4">
           <label for="tit3nivel" class="form-label">Titulo de Tercer Nivel</label>
           <select class="form-select" name="tit3nivel" aria-label="Default select example">
-            <option value="Comunicador">Comunicador</option>
-            <option value="Promotor">Promotor</option>
+            <option value="Comunicación Social">Comunicación Social</option>
+            <option value="Ecoturismo">Ecoturismo</option>
+            <option value="Psicologa Clínica">Psicologa Clínica</option>
+            <option value="Sociologa">Sociologa</option>
           </select>
         </div>
         <div class="form-group  col-4">
-          <label for="tit4nivel" class="form-label">Titulo de Tercer Nivel</label>
+          <label for="tit4nivel" class="form-label">Titulo de Cuarto Nivel</label>
           <select class="form-select" name="tit4nivel" aria-label="Default select example">
-            <option value="Comunicador">Comunicador</option>
-            <option value="Promotor">Promotor</option>
+            <option value="Especialista en Derechos Humanos">Especialista en Derechos Humanos</option>
+            <option value="Magister en Derecho">Magister en Derecho</option>
+            <option value="Magister en educación superior">Magister en educación superior</option>
+            <option value="Maestría en Ciencias Biológicas">Maestría en Ciencias Biológicas</option>
           </select>
         </div>
         <div class="form-group col-4">
@@ -155,7 +163,7 @@ $usuario = mysqli_fetch_assoc($resultado);
           <label for="ubicacion" class="form-label">Ubicacion</label>
           <input id="ubicacion" name="ubicacion" class="form-control" value="<?php echo $usuario['ubicacion']; ?>" required>
         </div>
-          
+
         <div class="form-group col-4">
           <label for="rol" class="form-label">Rol de usuario *</label>
           <input type="number" id="rol" name="rol" class="form-control" placeholder="Escribe el rol, 1 admin, 2 lector.." value="<?php echo $usuario['rol']; ?>" disabled required>
@@ -171,4 +179,5 @@ $usuario = mysqli_fetch_assoc($resultado);
     </div>
   </form>
 </body>
+
 </html>
